@@ -10,7 +10,7 @@ while(!(UCSR0A & (1<<UDRE0)))
   // NOW WRITE DATA TO USART BUFFER
   UDR0=data;
 }
-void USARTWriteInit(uint16_t ubrr_value)
+void USARTInit(uint16_t ubrr_value)
 {
  //set Baud rate
  UBRR0L= ubrr_value;
