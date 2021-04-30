@@ -22,6 +22,15 @@ void peripheral_init(void)
 {
 	/* Configure LED Pin */
 	DDRB |= (1 << DDB0);
+    DDRB&=~(1<<PD0);
+    DDRB&=~(1<<PD4);
+
+    PORTD|=(1<<PD0);
+    PORTD|=(1<<PD4);
+
+    InitADC();//Initialise ADC
+    InitPwm();//Initialization for PWM output
+    USARTInit(103);//USART Initiation
 }
 
 void change_led_state(uint8_t state)
@@ -32,14 +41,10 @@ void change_led_state(uint8_t state)
 
 int main(void)
 {
-    InitADC();
+    
     uint16_t temp;
 
-DDRB&=~(1<<PD0);
-DDRB&=~(1<<PD4);
 
-PORTD|=(1<<PD0);
-PORTD|=(1<<PD4);
 
 
 	peripheral_init();
