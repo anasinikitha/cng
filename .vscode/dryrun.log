@@ -1,0 +1,7 @@
+make.exe --dry-run --keep-going --print-directory
+make.exe: Entering directory `g:/cng'
+avr-gcc.exe -g -Wall -Os -mmcu=atmega328  -I inc main.c src/Activity1.c src/Activity2.c src/Activity3.c src/Activity4.c -o Build\Blinky.elf
+avr-objcopy.exe -j .text -j .data -O ihex Build\Blinky.elf Build\Blinky.hex
+ 
+make.exe: Leaving directory `g:/cng'
+ 
