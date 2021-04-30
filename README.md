@@ -1,2 +1,3 @@
 # cng
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8417ae4ae92b4c0fa6263de6efb41f06)](https://app.codacy.com/gh/anasinikitha/cng?utm_source=github.com&utm_medium=referral&utm_content=anasinikitha/cng&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/088729772790465ab22b566cc1fb38bf)](https://app.codacy.com/gh/anasinikitha/cng?utm_source=github.com&utm_medium=referral&utm_content=anasinikitha/cng&utm_campaign=Badge_Grade_Settings)
