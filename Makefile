@@ -1,9 +1,13 @@
-PROJ_NAME = Blinky
+PROJ_NAME = Carheater
 
 BUILD_DIR = Build
 
 # All Source code files
-SRC =src/setng.c
+SRC = main.c\
+src/Activity1.c\
+src/Activity2.c\
+src/Activity3.c\
+src/Activity4.c
 
 # All header file paths
 INC = -I inc
@@ -33,6 +37,7 @@ endif
 all:$(BUILD_DIR)
 # Compile the code and generate the ELF file
 	$(CC) -g -Wall -Os -mmcu=atmega328  $(INC) $(SRC) -o $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf)
+	$(AVR_OBJ_CPY) -j .text -j .data -O ihex $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).elf) $(call FixPath,$(BUILD_DIR)/$(PROJ_NAME).hex)
 
 $(BUILD_DIR):
 # Create directory to store the built files
